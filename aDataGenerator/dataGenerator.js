@@ -1,4 +1,4 @@
-//const db = require('../database/index');
+const db = require('../database/index');
 
 const loremIpsum = [
   'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur',
@@ -220,6 +220,6 @@ for (let i = 0; i < 100; i += 1) {
   roomData.push(roomInstance);
 }
 
-//db.save(roomData);
+// db.save(roomData);
 
 module.exports.roomData = roomData;

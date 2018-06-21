@@ -22,8 +22,9 @@ class App extends React.Component {
     this.getHomeData(Math.floor(Math.random() * (100)) + 1000);
   }
 
-  getHomeData(id) {
-    axios.get(`/rooms/${id}`)
+  getHomeData() {
+    let id = window.location.pathname;
+    axios.get(`/rooms${id}`)
       .then((response) => {
         const homeData = response.data[0];
         this.setState({ home: homeData });
